@@ -1,0 +1,43 @@
+<%- include('../partials/header', { title: pageTitle }) %>
+
+<main class="main-content">
+  <!-- Homes Section -->
+  <section class="homes-section">
+    <% if (favouriteHomes && favouriteHomes.length !== 0) { %>
+    <h2 class="section-title">Here are your Favourites</h2>
+    <div class="home-container">
+      <% favouriteHomes.forEach(home => { %>
+      <div class="home-card">
+        <img src=" <%= home.photo %>" alt="Home image" class="home-img" />
+        <div class="home-details">
+          <h3 class="home-title"><%= home.housename %></h3>
+          <p><strong>Location:</strong> <%= home.location %></p>
+          <p><strong>Price:</strong> $<%= home.price %></p>
+          <div class="host-button">
+            <button class="host-but" name="book-now">Book-Now</button>
+            <a class="host-but" href="/homes/<%= home._id %>">Details</a>
+          </div>
+          <div class="rate-fav">
+            <i class="fa-solid fa-star star-icon"></i>
+            <span class="rating-value"><%= home.rating %></span>
+          </div>
+          <div class="fav-icon">
+            <form action="/favourites/<%= home._id %>" method="post">
+            <button class="host-but" type="submit">Remove from favourites</button>
+          </form>
+          </div>
+          
+        </div>
+      </div>
+      <% }) %>
+    </div>
+    <% } else { %>
+    <div class="no-homes">
+      <p>Opps!!! you have no FAVOURITES yet</p>
+      <a href="/" class="btn-secondary">Add one now</a>
+    </div>
+    <% } %>
+  </section>
+</main>
+
+<%- include('../partials/footer') %>

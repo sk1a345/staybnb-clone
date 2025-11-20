@@ -1,0 +1,32 @@
+{
+  "name": "deep-dive-into-express-airbnb-backend",
+  "version": "1.0.0",
+  "description": "Here I will share some adjvance topics of the expressJs airbnb backend",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon App.js"
+  },
+  "author": "Sneha",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "nodemon": "^3.1.10",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "body-parser": "^2.2.0",
+    "connect-mongodb-session": "^5.0.0",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "express-validator": "^7.3.0",
+    "mongodb": "^7.0.0",
+    "mongoose": "^8.19.3",
+    "multer": "^2.0.2",
+    "mysql2": "^3.15.3"
+  }
+}

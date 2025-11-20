@@ -1,0 +1,105 @@
+<%- include('../partials/header', { title:pageTitle }) %>
+
+<main>
+  <h1>Register Here</h1>
+
+  <form action="/signup" method="POST">
+
+    <% if (errors && errors.length > 0) { %>
+      <div class="error-box">
+        <strong>Please fix the following errors:</strong>
+        <ul class="error-list">
+          <% errors.forEach(error => { %>
+            <li><%= error %></li>
+          <% }) %>
+        </ul>
+      </div>
+    <% } %>
+
+    <label>Enter your first name: </label>
+    <input 
+      type="text" 
+      name="firstName" 
+      placeholder="Ram"
+      value="<%= oldInput ? oldInput.firstName : '' %>"
+      required 
+    />
+    <br />
+
+    <label>Enter your last name: </label>
+    <input 
+      type="text" 
+      name="lastName" 
+      placeholder="Patel"
+      value="<%= oldInput ? oldInput.lastName : '' %>"
+    />
+    <br />
+
+    <label>Enter your email: </label>
+    <input 
+      type="email" 
+      name="email"
+      placeholder="Email/Username"
+      value="<%= oldInput ? oldInput.email : '' %>"
+      required 
+    />
+    <br />
+
+    <label>Enter Your Password: </label>
+    <input type="password" name="password" required />
+    <br />
+
+    <label>Re-enter password: </label>
+    <input type="password" name="confirmPassword" required />
+    <br />
+
+    <!-- radio buttons -->
+    <label><strong>Sign-up as:</strong></label>
+
+    <div style="display: flex; gap: 20px; margin: 8px 0; align-items: center">
+
+      <label>
+        <input 
+          type="radio" 
+          name="role" 
+          value="user"
+          <%= oldInput && oldInput.role === "user" ? "checked" : "" %>
+          required
+        />
+        User
+      </label>
+
+      <label>
+        <input 
+          type="radio" 
+          name="role" 
+          value="host"
+          <%= oldInput && oldInput.role === "host" ? "checked" : "" %>
+          required
+        />
+        Host
+      </label>
+
+    </div>
+
+    <label>
+      <input 
+        type="checkbox" 
+        name="agree" 
+        <%= oldInput && oldInput.agree ? "checked" : "" %>
+      /> 
+      I agree to the <a href="/terms" style="color: blue">Terms & Conditions</a>
+    </label>
+
+    <br />
+    <button type="submit">Submit</button>
+
+    <p>
+      Existing user? 
+      <a style = " color: red"href="/login">Login here</a>
+    </p>
+
+  </form>
+</main>
+
+<%- include('../partials/footer') %>

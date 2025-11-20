@@ -1,0 +1,287 @@
+/* ==========================
+   Global Reset & Typography
+   ========================== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Secondary Navbar (Under Header) */
+.sub-navbar {
+  width: 100%;
+  background-color: #fff8f0;
+  border-bottom: 2px solid #f1c27d;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sub-navbar .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-left: 30px;
+  padding: 12px 0;
+  width: 100%;
+}
+
+/* Create a spacer that pushes Login/SignUp to the right */
+.nav-spacer {
+  margin-left: auto;
+}
+
+/* Style for both Login and Sign Up links */
+.sub-navbar .nav-links a[href="/login"],
+.sub-navbar .nav-links a[href="/signup"] {
+  background-color: #ffb347;
+  color: #222;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sub-navbar .nav-links a[href="/login"]:hover,
+.sub-navbar .nav-links a[href="/signUp"]:hover {
+  background-color: #ff9f1c;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+/* ==========================
+   Main Section
+   ========================== */
+.main-content {
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==========================
+   Homes Section
+   ========================== */
+.homes-section {
+  margin-top: 40px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* Grid container */
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Card styling */
+.home-card {
+  background-color: #fff8f0;
+  border: 2px solid #f1c27d;
+  border-radius: 12px;
+  width: 260px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* stretch content full width */
+  justify-content: space-between; /* evenly space image, text, button */
+}
+
+.home-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.home-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.home-details h3 {
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.home-details p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ==========================
+   Empty State
+   ========================== */
+.no-homes {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.no-homes p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* ==========================
+   Footer
+   ========================== */
+footer {
+  background-color: #fff8f0;
+  color: #444;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 50px;
+  border-top: 2px solid #f1c27d;
+  font-size: 0.95rem;
+}
+
+/* ==========================
+   Responsive Design
+   ========================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .home-card {
+    width: 85%;
+  }
+  .btn-primary,
+  .btn-secondary {
+    width: 80%;
+  }
+}
+@media (min-width: 300px) and (max-width: 550px) {
+  .home-card {
+    align-items: center;
+  }
+}
+
+/* Host buttons */
+.host-button {
+  display: flex;
+  justify-content: center; /* centers button horizontally */
+  margin-top: 15px; /* space above */
+  gap: 20px;
+}
+
+.host-but {
+  padding: 10px 20px; /* adds breathing space around text */
+  border: none;
+  background-color: #ffb347;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: auto; /* ensures width fits content */
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.host-but:hover {
+  background-color: #ff9f1c;
+}
+
+/* Parent container for rating and favourite */
+.rate-fav {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers content horizontally */
+  gap: 8px; /* adds small space between star, text, and heart */
+  margin-top: 20px;
+  font-size: 1rem;
+  position: relative;
+  width: 100%; /* span the full width of card */
+}
+/* ⭐ Star icon */
+.rate-fav .star-icon {
+  color: #f1c40f; /* bright yellow */
+  margin-right: 4px;
+  font-size: 1rem;
+}
+
+/* 4.5 rating text */
+.rate-fav .rating-value {
+  font-weight: 600;
+  color: #555;
+  margin-right: 8px;
+  font-size: 0.95rem;
+}
+
+.fav-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top:10px;
+  
+}
+.fav-icon button{
+  background: linear-gradient(90deg, #d92f29, #cb6161);
+}
+
+/* Optional active link style */
+.sub-navbar .nav-links a.active {
+  padding: 7px;
+  background-color: #f5b459;
+  color: white;
+  border-radius: 10px;
+}
+
+/* Error Box */
+.error-box {
+  background: #ffe6e6;
+  border-left: 4px solid #ff4d4d;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  color: #b30000;
+  font-size: 14px;
+}
+
+.error-box strong {
+  font-size: 15px;
+}
+
+.error-list {
+  margin: 8px 0 0 20px;
+  padding: 0;
+}
+
+.error-list li {
+  margin-bottom: 4px;
+}
+
+/* Optional: highlight invalid inputs */
+.input-error {
+  border: 2px solid #ff4d4d !important;
+  background: #fff5f5;
+}

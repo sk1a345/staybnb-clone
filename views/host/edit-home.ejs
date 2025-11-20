@@ -1,0 +1,41 @@
+<%- include('../partials/header', { title:pageTitle }) %>
+
+<main>
+  <h1><%= editing?"Edit" :"Register" %> Your Home On airbnb</h1>
+  <form action="/host/<%= editing? "edit-home":"add-home" %>" method="POST" enctype= "multipart/form-data" >
+    <input type="hidden" name="id" value="<%= editing? home._id : '' %>">
+    <label>Enter the Housename:</label>
+    <input type="text" name="housename" value="<%= editing? home.housename : "" %>" 
+    placeholder="Name of your house:" required />
+    <br><br>
+
+    <label>Enter the Location of house:</label>
+    <input type="text" name="location" value= "<%= editing? home.location :'' %>" placeholder="Enter the location" required />
+    <br><br>
+
+    <label>Enter the Price:</label>
+    <input type="number" name="price" value="<%= editing? home.price : '' %>" placeholder="e.g. 10000" required />
+    <br><br>
+    <label>Enter the Rating: </label>
+    <input type="number" name="rating" value="<%= editing? home.rating: '' %>" placeholder="1-5 (e.g: 4.5)" step="0.1"
+    min="1"max="5"required>
+
+    <label>Enter Image URL of House</label>
+    <input type="file" name="photo" accept="image/jpg, image/jpeg, image/png" value="<%= editing? home.photo: '' %>" placeholder="/images/image-name.png">
+    <br><br>
+
+    <label>Describe Your Home</label>
+    <input
+    type="text"
+    id="description"
+    name="description"
+    value="<%= editing ? home.description : '' %>"
+    placeholder="Describe Your Home">
+
+    <br><br>
+
+    <button type="submit"><%= editing ? 'Update':'Add Home' %></button>
+  </form>
+</main>
+
+<%- include('../partials/footer') %>

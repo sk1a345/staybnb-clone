@@ -1,0 +1,32 @@
+<%- include('../partials/header', { title:pageTitle }) %>
+
+<main>
+  <h1>Login Your Info Here</h1>
+  <form action="/login" method="POST">
+    <% if (errors && errors.length > 0) { %>
+      <div class="error-box">
+        <strong>Please fix the following errors:</strong>
+        <ul class="error-list">
+          <% errors.forEach(error => { %>
+            <li><%= error %></li>
+          <% }) %>
+        </ul>
+      </div>
+    <% } %>
+    <input type="hidden" name="id" value="<%= editing? home._id : '' %>">
+    <label>Enter your email: </label>
+    <input type="email" name="email" value="<%= oldInput.email ? oldInput.email : '' %>"
+    placeholder="Email/Username" required />
+    <br><br>
+
+    <label>Enter Your Password: </label>
+    <input type="password" name="password" placeholder="Enter Your Password" required />
+    <br><br>
+
+    <button type="submit">Submit</button>
+    <br>
+    <label>Don't have an account ? <a style="color: red;" href="/signup">Sign up here</a></label>
+  </form>
+</main>
+
+<%- include('../partials/footer') %>

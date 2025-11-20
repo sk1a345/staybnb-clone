@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %> | Airbnb</title>
+
+    <!-- Common styles -->
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/addHome.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- dispaly styling -->
+    <% if (title === 'Details') { %>
+    <link rel="stylesheet" href="/css/display.css" />
+    <% } %>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Airbnb</h1>
+    </header>
+
+    <!-- Secondary Navbar -->
+    <nav class="sub-navbar">
+      <div class="nav-links">
+        <% if (isLoggedIn) { %> <% if(user && user.role === 'user') { %>
+        <a href="/" class="<%= currentPage === 'more-homes' ? 'active' : '' %>"
+          >Homes</a
+        >
+        <a
+          href="/bookings"
+          class="<%= currentPage === 'bookings' ? 'active' : '' %>"
+          >Bookings</a
+        >
+        <a
+          href="/favourites"
+          class="<%= currentPage === 'favourites' ? 'active' : '' %>"
+          >Favourites</a
+        >
+        <% } else { %>
+        <a
+          href="/host/host-home-list"
+          class="<%= currentPage === 'host-homes' ? 'active' : '' %>"
+          >Host Homes</a
+        >
+        <a
+          href="/host/add-home"
+          class="<%= currentPage === 'add-home' ? 'active' : '' %>"
+          >Add Home</a
+        >
+        <% } %> <% } %> <% if(!isLoggedIn) { %>
+        <a
+          href="/login"
+          class="<%= currentPage === 'login-page' ? 'active' : '' %>"
+          >Login</a
+        >
+        <a
+          href="/signup"
+          class="<%= currentPage==='Sign-up' ? 'active' : '' %>"
+        >
+          Sign Up
+        </a>
+        <% } else{ %>
+        <form action="/logout" method="POST">
+          <button class="nav-link-button" style="padding: 8px" type="submit">Logout</button>
+        </form>
+        <% } %>
+      </div>
+    </nav>
+  </body>
+</html>

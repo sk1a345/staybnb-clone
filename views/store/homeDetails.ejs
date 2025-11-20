@@ -1,0 +1,31 @@
+<%- include("../partials/header",{title:pageTitle}) %>
+
+<main class="main-content">
+  <!-- Homes Section -->
+   <h2 style="text-align: center;">Here are the Details of <p style="color:rgb(230, 99, 17); margin-top:3px"><%= home.housename %></p></h2>
+  <section class="homes-section">
+    <div class="home-container">
+      <div class="home-card">
+        <img src=" <%= home.photo %>" alt="Home image" class="home-img" />
+        <ul class="home-details" style="list-style-type:none;">
+          <li class="home-title"><strong>House Name: </strong><%= home.housename %></li>
+          <li><strong>Location:</strong> <%= home.location %></li>
+          <li><strong>Price:</strong> $<%= home.price %></li>
+          <div class="host-button">
+            <button class="host-but" name="book-now">Book-Now</button>
+            
+          </div>
+          <div class="rate-fav">
+            <i class="fa-solid fa-star star-icon"></i>
+            <span class="rating-value"><%= home.rating %></span>
+          </div>
+          <div class="fav-icon">
+            <%- include("../partials/favourite") %>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include("../partials/footer") %>

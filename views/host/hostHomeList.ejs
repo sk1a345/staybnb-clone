@@ -1,0 +1,44 @@
+<%- include('../partials/header', { title: pageTitle }) %>
+
+<main class="main-content">
+  <!-- Homes Section -->
+  <section class="homes-section">
+    <% if (registeredHomes && registeredHomes.length !== 0) { %>
+    <h2 class="section-title">Your Registered Homes</h2>
+    <div class="home-container">
+      <% registeredHomes.forEach(home => { %>
+      <div class="home-card">
+        <img src=" <%= home.photo %>" alt="Home image" class="home-img" />
+        <div class="home-details">
+          <h3 class="home-title"><%= home.housename %></h3>
+          <p><strong>Location:</strong> <%= home.location %></p>
+          <p><strong>Price:</strong> $<%= home.price %></p>
+          <div class="rate-fav">
+            <i class="fa-solid fa-star star-icon"></i>
+            <span class="rating-value"><%= home.rating %></span>
+          </div>
+          <div class="host-button">
+            <a
+              href="/host/edit-home/<%= home._id %>?editing=true"
+              class="host-but"
+              name="submit"
+              >Edit</a
+            >
+            <form action="/host/delete-home/<%= home._id %>" method="post">
+              <button type="submit" class="host-but">Delete</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+    <% } else { %>
+    <div class="no-homes">
+      <p>No homes registered yet.</p>
+      <a href="/host/add-home" class="btn-secondary">Add one now</a>
+    </div>
+    <% } %>
+  </section>
+</main>
+
+<%- include('../partials/footer') %>
