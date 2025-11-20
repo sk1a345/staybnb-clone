@@ -102,7 +102,7 @@ app.use("/host", hostRouter);
 app.use(errorController.error404);
 
 // Server + DB
-const port =3000;
+const port =process.env.PORT || 3000;
 mongoose
   .connect(DB_Path)
   .then(() => {
