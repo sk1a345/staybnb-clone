@@ -54,7 +54,7 @@ Follow these steps to run the project locally:
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/staybnb-clone.git
+git clone https://github.com/sk1a345/staybnb-clone.git
 cd staybnb-clone
 ```
 
@@ -106,17 +106,37 @@ npm start
 6. Deploy 🚀
 
 ---
-
 ## 📸 Screenshots
-```md
-![User Interface](https://raw.githubusercontent.com/sk1a345/staybnb-clone/cc3073b3e568483a651e0b25145c8dfda91ac33f/Screenshot%202025-11-20%20204509.png)
-![Host Interface](https://raw.githubusercontent.com/sk1a345/staybnb-clone/cc3073b3e568483a651e0b25145c8dfda91ac33f/Screenshot%202025-11-20%20204543.png)
-![Signup Page](https://raw.githubusercontent.com/sk1a345/staybnb-clone/cc3073b3e568483a651e0b25145c8dfda91ac33f/Screenshot%202025-11-20%20204326.png)
-![Login Page](https://raw.githubusercontent.com/sk1a345/staybnb-clone/main/Screenshot%202025-11-20%20204257.png)
 
+Below are the main interfaces of the **StayBnB Clone** project — showcasing both the user side and host side experience.
 
+---
 
-```
+### 🧑‍💻 User Interface  
+<p align="center">
+  <img src="https://github.com/sk1a345/staybnb-clone/blob/main/Screenshot%202025-11-20%20204509.png?raw=true" alt="User Interface" width="700">
+</p>
+
+---
+
+### 🏠 Host Interface  
+<p align="center">
+  <img src="https://github.com/sk1a345/staybnb-clone/blob/main/Screenshot%202025-11-20%20204543.png?raw=true" alt="Host Interface" width="700">
+</p>
+
+---
+
+### 📝 Signup Page  
+<p align="center">
+  <img src="https://github.com/sk1a345/staybnb-clone/blob/main/Screenshot%202025-11-20%20204326.png?raw=true" alt="Signup Page" width="600">
+</p>
+
+---
+
+### 🔐 Login Page  
+<p align="center">
+  <img src="https://github.com/sk1a345/staybnb-clone/blob/main/Screenshot%202025-11-20%20204257.png?raw=true" alt="Login Page" width="600">
+</p>
 
 ---
 
