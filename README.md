@@ -109,10 +109,12 @@ npm start
 
 ## 📸 Screenshots
 ```md
-![User Interface](https://github.com/sk1a345/staybnb-clone/blob/cc3073b3e568483a651e0b25145c8dfda91ac33f/Screenshot%202025-11-20%20204509.png)
-![Host Interface](https://github.com/sk1a345/staybnb-clone/blob/cc3073b3e568483a651e0b25145c8dfda91ac33f/Screenshot%202025-11-20%20204543.png)
-![Signup Page](https://github.com/sk1a345/staybnb-clone/blob/cc3073b3e568483a651e0b25145c8dfda91ac33f/Screenshot%202025-11-20%20204326.png)
-![Login Page](https://github.com/sk1a345/staybnb-clone/blob/cc3073b3e568483a651e0b25145c8dfda91ac33f/Screenshot%202025-11-20%20204257.png)
+![User Interface](https://raw.githubusercontent.com/sk1a345/staybnb-clone/cc3073b3e568483a651e0b25145c8dfda91ac33f/Screenshot%202025-11-20%20204509.png)
+![Host Interface](https://raw.githubusercontent.com/sk1a345/staybnb-clone/cc3073b3e568483a651e0b25145c8dfda91ac33f/Screenshot%202025-11-20%20204543.png)
+![Signup Page](https://raw.githubusercontent.com/sk1a345/staybnb-clone/cc3073b3e568483a651e0b25145c8dfda91ac33f/Screenshot%202025-11-20%20204326.png)
+![Login Page](https://raw.githubusercontent.com/sk1a345/staybnb-clone/cc3073b3e568483a651e0b25145c8dfda91ac33f/Screenshot%202025-11-20%20204257.png)
+
+
 
 ```
 
